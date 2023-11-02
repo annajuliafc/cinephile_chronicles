@@ -1,0 +1,35 @@
+.header {
+    height: 80px;
+    padding: 24px 120px;
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+
+        a {
+            font-family: "Bebas Neue", sans-serif;
+            margin: 0;
+            letter-spacing: 0.03em;
+            font-size: 32px;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        span {
+            flex: 2;
+            
+            input { 
+                width: 100%;
+            }
+        }
+
+        .actions {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 16px;
+        }
+    }
+}

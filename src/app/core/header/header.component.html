@@ -1,0 +1,15 @@
+<header class="header">
+  <nav class="nav">
+    <a routerLink="/home">Cinephile Chronicles</a>
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input type="text" pInputText placeholder="Type to search.." />
+    </span>
+    <ul class="actions">
+      <p-button icon="pi pi-heart" [rounded]="true" severity="help"></p-button>
+      <p-button icon="pi pi-user" (click)="menu.toggle($event)" [rounded]="true" severity="secondary"></p-button>
+      <p-toast></p-toast>
+      <p-menu #menu [model]="items" [popup]="true"></p-menu>
+    </ul>
+  </nav>
+</header>
