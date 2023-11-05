@@ -1,0 +1,22 @@
+<div class="login">
+    <a routerLink="/" class="title">Cinephile Chronicles</a>
+
+    <form>
+        <span class="p-float-label input">
+            <input pInputText id="email" />
+            <label htmlFor="email">Email</label>
+        </span>
+
+        <span class="p-float-label input">
+            <p-password [feedback]="false" [toggleMask]="true"></p-password>
+            <label for="password">Password</label>
+        </span>
+
+        <a routerLink="/forget-password" class="forget-password">Forget Password?</a>
+
+        <div class="actions-buttons">
+            <p-button label="Login" [rounded]="true"></p-button>
+            <p-button label="Register" [outlined]="true" [rounded]="true" routerLink="/register"></p-button>
+        </div>
+    </form>
+</div>

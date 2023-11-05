@@ -17,21 +17,3 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
-.footer {
-    display: flex;
-    justify-content: center;
-    height: auto;
-    padding: 24px 120px;
-    align-items: center;
-    gap: 20px;
-
-    img {
-        height: 36px;
-    }
-
-    p {
-        font-size: 12px;
-        text-align: center;
-    }
-}

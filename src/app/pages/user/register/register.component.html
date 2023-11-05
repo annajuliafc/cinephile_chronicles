@@ -1,0 +1,69 @@
+<header class="header">
+    <a routerLink="/">Cinephile Chronicles</a>
+    <h2>Create new account</h2>
+    <p-button label="Login" class="login-button" routerLink="/login" [link]="true"></p-button>
+</header>
+
+<div class="user-edit">
+    <p-steps [model]="items" [readonly]="false" class="steps" [activeIndex]="activeIndex"
+        (activeIndexChange)="onActiveIndexChange($event)"></p-steps>
+
+    <form>
+        <div class="step-personal" *ngIf="this.activeIndex == 0">
+            <span class="p-float-label input">
+                <input pInputText id="first-name" />
+                <label htmlFor="first-name">First name</label>
+            </span>
+
+            <span class="p-float-label input">
+                <input pInputText id="last-name" />
+                <label htmlFor="last-name">Last name</label>
+            </span>
+
+            <span class="p-float-label input">
+                <p-calendar dateFormat="dd.mm.yy" id="birthday" [showIcon]="true"></p-calendar>
+                <label htmlFor="birthday">Date of Birth</label>
+            </span>
+
+            <span class="p-float-label input">
+                <p-inputMask mask="(999) 999-9999" placeholder="(999) 999-9999" id="phone"></p-inputMask>
+                <label htmlFor="phone">Phone</label>
+            </span>
+        </div>
+
+        <div class="step-account" *ngIf="this.activeIndex == 1">
+            <span class="p-float-label input">
+                <input pInputText id="email" />
+                <label htmlFor="email">Email</label>
+            </span>
+
+            <span class="p-float-label input">
+                <p-password id="password" [toggleMask]="true">
+                    <ng-template pTemplate="footer">
+                        <p-divider></p-divider>
+                        <p class="mt-2">Suggestions</p>
+                        <ul class="pl-2 ml-2 mt-0">
+                            <li>At least one lowercase</li>
+                            <li>At least one uppercase</li>
+                            <li>At least one numeric</li>
+                            <li>Minimum 8 characters</li>
+                        </ul>
+                    </ng-template>
+                </p-password>
+                <label htmlFor="password">Password</label>
+            </span>
+
+            <span class="p-float-label input">
+                <p-password [feedback]="false" id="confirm-password" [toggleMask]="true"></p-password>
+                <label htmlFor="confirm-password">Confirm password</label>
+            </span>
+        </div>
+
+
+        <div class="action-buttons">
+            <p-button label="Next" [rounded]="true" [outlined]="true" *ngIf="this.activeIndex == 0"
+                (onClick)="onChangeStep()"></p-button>
+            <p-button label="Register" [rounded]="true" *ngIf="this.activeIndex == 1"></p-button>
+        </div>
+    </form>
+</div>

@@ -6753,7 +6753,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
     outline: 0 none;
     outline-offset: 0;
-    box-shadow: 0 0 0 .2rem rgba(165, 180, 252, .5)
+    /* box-shadow: 0 0 0 .2rem rgba(165, 180, 252, .5) */
 }
 
 .p-steps .p-steps-item.p-highlight .p-steps-number {
