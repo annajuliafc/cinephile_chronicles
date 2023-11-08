@@ -1,9 +1,3 @@
-<header class="header">
-    <a routerLink="/">Cinephile Chronicles</a>
-    <h2>Create new account</h2>
-    <p-button label="Login" class="login-button" routerLink="/login" [link]="true"></p-button>
-</header>
-
 <div class="user-edit">
     <p-steps [model]="items" [readonly]="false" class="steps" [activeIndex]="activeIndex"
         (activeIndexChange)="onActiveIndexChange($event)"></p-steps>

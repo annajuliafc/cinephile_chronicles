@@ -1,0 +1,23 @@
+.header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 32px;
+
+    a.header-app-title {
+        flex: 1;
+    }
+
+    h2 {
+        margin: 0;
+        text-align: center;
+        flex: 1;
+    }
+
+    .login-button, .favorite-button {
+        flex: 1;
+        text-align: end;
+    }
+}

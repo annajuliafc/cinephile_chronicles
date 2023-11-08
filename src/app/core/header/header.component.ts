@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
           {
             label: 'Edit',
             icon: 'pi pi-user-edit',
-            routerLink: '',
+            routerLink: 'user/edit-profile',
           },
           {
             label: 'Logout',

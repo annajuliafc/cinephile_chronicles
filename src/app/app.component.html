@@ -3,7 +3,7 @@
   <h2>A story about a cinema lover.</h2>
   <p-button label="HOME" [rounded]="true" routerLink="/home" [ngStyle]="{color: 'var(--surface-900)'}"></p-button>
 </div> -->
-<app-header *ngIf="_router.url != '/login' && _router.url != '/register' && _router.url != '/profile'"></app-header>
+<app-header *ngIf="_router.url.split('/')[1] != 'user'"></app-header>
 <div class="content">
   <router-outlet></router-outlet>
 </div>

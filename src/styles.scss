@@ -1,6 +1,10 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 
+:root {
+  --title-font: "Bebas Neue", sans-serif;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -16,4 +20,14 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  a.header-app-title {
+    font-family: var(--title-font);
+    margin: 0;
+    letter-spacing: 0.03em;
+    font-size: 32px;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-shadow: 2px 2px var(--gray-300);
+  }
 }

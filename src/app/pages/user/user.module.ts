@@ -1,8 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+// Route
+import { UserRoutingModule } from './app-routing.module';
+
+// Components
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
+// PrimeNG Modules
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { DividerModule } from 'primeng/divider';
@@ -11,13 +18,19 @@ import { CardModule } from 'primeng/card';
 import { CalendarModule } from 'primeng/calendar';
 import { InputMaskModule } from 'primeng/inputmask';
 import { StepsModule } from 'primeng/steps';
-import { ProfileComponent } from './profile/profile.component';
 import { TooltipModule } from 'primeng/tooltip';
+import { UserComponent } from './user.component';
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, ProfileComponent],
+  declarations: [
+    UserComponent,
+    LoginComponent,
+    RegisterComponent,
+    EditProfileComponent,
+  ],
   imports: [
     CommonModule,
+    UserRoutingModule,
     PasswordModule,
     InputTextModule,
     DividerModule,
@@ -26,8 +39,8 @@ import { TooltipModule } from 'primeng/tooltip';
     CalendarModule,
     InputMaskModule,
     StepsModule,
-    TooltipModule
+    TooltipModule,
   ],
-  exports: [LoginComponent, RegisterComponent, ProfileComponent],
+  exports: [UserComponent],
 })
 export class UserModule {}
